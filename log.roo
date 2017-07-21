@@ -1,0 +1,45 @@
+// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2017-07-21 14:27:40
+hint
+project setup --topLevelPackage org.growbit
+hint
+jpa setup --provider HIBERNATE --database MYSQL --databaseName roo --hostName 127.0.0.1 --profile dev --userName root
+hint
+entity jpa --class ~.domain.Spaggiari
+hint
+field date --fieldName updated --type java.util.Date --notNull 
+// [failed] field number --fieldName id --type java.lang.Long --notNull --unique
+field number --fieldName grade --type java.lang.Double --notNull 
+hint focus
+help focus
+enum type --class ~.Topic
+enum constant --name COMPUTER_SCIENCE 
+enum constant --name MATH
+enum type --class ~.TopicType.java
+enum constant --name ORAL_TEST
+enum constant --name PROJECT
+enum constant --name WRITTEN_TEST
+focus --class ~.domain.Spaggiari
+// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2017-07-21 14:44:55
+focus --class ~.domain.Spaggiari
+field enum --fieldName topic --type ~.Topic --enumType STRING
+!os ls
+!os rm -R src/main/java/org/growbit/topictype
+enum type --class ~.TopicType
+enum constant --name WRITTEN_TEST
+enum constant --name PROJECT
+enum constant --name ORAL_TEST
+focus --class ~.domain.Spaggiari
+// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2017-07-21 14:50:00
+focus --class ~.domain.Spaggiari
+// [failed] field enum --fieldName topic --type ~.TopicType --enumType STRING
+field enum --fieldName topic_type --type ~.TopicType --enumType STRING
+repository jpa --all 
+service --all 
+web mvc setup
+web mvc view setup --type THYMELEAF 
+web mvc controller --all --responseType THYMELEAF 
+web mvc controller --all --pathPrefix /api
+// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2017-07-21 14:58:32
+hint profile
+push-in --all --force
+jpa setup --provider HIBERNATE --database MYSQL --databaseName roo --hostName 127.0.0.1 --profile dev --userName root
