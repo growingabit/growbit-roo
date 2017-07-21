@@ -43,3 +43,5 @@ web mvc controller --all --pathPrefix /api
 hint profile
 push-in --all --force
 jpa setup --provider HIBERNATE --database MYSQL --databaseName roo --hostName 127.0.0.1 --profile dev --userName root
+// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2017-07-21 15:21:16
+// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2017-07-21 15:26:50
